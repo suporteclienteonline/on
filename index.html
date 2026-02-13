@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Marinha Confecções</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome 6 (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f5f9ff; /* azul bem clarinho */
+            color: #1e3a5f; /* azul escuro */
+        }
+        
+        /* Cores da marca - inspiradas no mar */
+        .bg-azul-marinho {
+            background-color: #0b2b4f !important; /* azul profundo */
+        }
+        
+        .bg-azul-claro {
+            background-color: #e6f0fa !important; /* azul bem claro */
+        }
+        
+        .bg-azul-onda {
+            background-color: #7ab7d0 !important; /* azul médio */
+        }
+        
+        .text-azul-profundo {
+            color: #0b2b4f !important;
+        }
+        
+        .text-azul-petroleo {
+            color: #1e5a7a !important;
+        }
+        
+        .btn-azul {
+            background-color: #1e5a7a;
+            border-color: #1e5a7a;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-azul:hover {
+            background-color: #0b2b4f;
+            border-color: #0b2b4f;
+            color: white;
+        }
+        
+        .btn-outline-azul {
+            border: 2px solid #1e5a7a;
+            color: #1e5a7a;
+            background-color: transparent;
+        }
+        
+        .btn-outline-azul:hover {
+            background-color: #1e5a7a;
+            color: white;
+        }
+        
+        .card-border-azul {
+            border: 2px solid #7ab7d0;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card-border-azul:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(10, 60, 100, 0.2);
+        }
+        
+        .icone-azul {
+            color: #1e5a7a;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        footer a {
+            color: #7ab7d0;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #0b2b4f 0%, #1e5a7a 100%);
+            padding: 100px 0;
+            color: white;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #0b2b4f;
+            font-weight: 600;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #1e5a7a;
+        }
+        
+        .onda-svg {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230b2b4f' fill-opacity='0.1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-azul-marinho sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fa-solid fa-fish"></i> 
+                Vida Marinha Confecções
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dados">Dados da Empresa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#diferenciais">Diferenciais</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Home) -->
+    <section id="home" class="hero-section">
+        <div class="container text-center">
+            <i class="fa-solid fa-water icone-azul mb-3" style="font-size: 4rem; color: #7ab7d0;"></i>
+            <h1 class="display-4 fw-bold">Vida Marinha Confecções</h1>
+            <p class="lead fs-3">Há mais de 20 anos vestindo o sul do Brasil com qualidade e estilo</p>
+            <div class="mt-5">
+                <a href="#sobre" class="btn btn-outline-light btn-lg px-4 me-2"><i class="fa-regular fa-compass me-2"></i>Nossa História</a>
+                <a href="#contato" class="btn btn-azul btn-lg px-4"><i class="fa-regular fa-message me-2"></i>Fale Conosco</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center section-title">Sobre Nós</h2>
+            <div class="row align-items-center mt-5">
+                <div class="col-md-6 order-md-2">
+                    <img src="https://placehold.co/600x400/7ab7d0/0b2b4f?text=Confecção+Vida+Marinha" alt="Fábrica Vida Marinha" class="img-fluid rounded-4 shadow">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <p class="fs-5">
+                        A <strong>Vida Marinha Ind e Com de Confeccoes LTDA</strong> foi fundada em <strong>14 de outubro de 2002</strong> na cidade de <strong>Criciúma, Santa Catarina</strong>, com o objetivo de produzir vestuário de alta qualidade para o mercado catarinense e brasileiro.
+                    </p>
+                    <p class="mt-4">
+                        <i class="fa-solid fa-location-dot" style="color: #1e5a7a; width: 25px;"></i> 
+                        <strong>Localização:</strong> Criciúma - SC, coração do polo têxtil catarinense.
+                    </p>
+                    <p>
+                        <i class="fa-regular fa-star" style="color: #1e5a7a; width: 25px;"></i> 
+                        <strong>Missão:</strong> Vestir pessoas com conforto, durabilidade e design, respeitando o meio ambiente e valorizando a mão de obra local.
+                    </p>
+                    <p>
+                        <i class="fa-regular fa-eye" style="color: #1e5a7a; width: 25px;"></i> 
+                        <strong>Visão:</strong> Ser referência em confecção no sul do país, reconhecida pela qualidade e inovação.
+                    </p>
+                    <p>
+                        <i class="fa-regular fa-hand-peace" style="color: #1e5a7a; width: 25px;"></i> 
+                        <strong>Valores:</strong> Qualidade, tradição, respeito ao cliente e sustentabilidade.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dados da Empresa (Informações oficiais em destaque) -->
+    <section id="dados" class="py-5 bg-azul-claro">
+        <div class="container">
+            <h2 class="text-center section-title">Dados Oficiais</h2>
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-lg rounded-4" style="border-left: 8px solid #1e5a7a !important;">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><i class="fa-solid fa-building text-azul-petroleo me-3 fs-5"></i> <strong>Razão Social:</strong><br> Vida Marinha Ind e Com de Confeccoes LTDA</p>
+                                    <p><i class="fa-solid fa-id-card text-azul-petroleo me-3 fs-5"></i> <strong>CNPJ:</strong><br> 05.360.791/0001-84</p>
+                                    <p><i class="fa-solid fa-calendar-alt text-azul-petroleo me-3 fs-5"></i> <strong>Fundação:</strong><br> 14/10/2002</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><i class="fa-solid fa-map-pin text-azul-petroleo me-3 fs-5"></i> <strong>Localização:</strong><br> Criciúma, Santa Catarina</p>
+                                    <p><i class="fa-solid fa-briefcase text-azul-petroleo me-3 fs-5"></i> <strong>Atividade Principal:</strong><br> 14.12-6-01 - Confecção de peças de vestuário, exceto roupas íntimas e sob medida</p>
+                                    <p><i class="fa-solid fa-circle-check text-success me-3 fs-5"></i> <strong>Situação Cadastral:</strong><br> <span class="badge bg-success fs-6 px-3 py-2">ATIVA</span></p>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                            <p class="text-muted fst-italic mb-0">
+                                <i class="fa-solid fa-fish me-2" style="color: #1e5a7a;"></i> Empresa regular perante a Receita Federal, com mais de 20 anos de tradição no mercado de confecções.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frases e Diferenciais (Cards) -->
+    <section id="diferenciais" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center section-title">Nossos Diferenciais</h2>
+            <div class="row g-4 mt-3">
+                <div class="col-md-4">
+                    <div class="card card-border-azul h-100 text-center p-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="fa-solid fa-shirt icone-azul"></i>
+                            <h4 class="card-title text-azul-profundo">Qualidade Têxtil</h4>
+                            <p class="card-text">"Tecidos selecionados e acabamento impecável em todas as peças."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-border-azul h-100 text-center p-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="fa-solid fa-scissors icone-azul"></i>
+                            <h4 class="card-title text-azul-profundo">Produção Própria</h4>
+                            <p class="card-text">"Da modelagem à costura, tudo feito em nossa fábrica em Criciúma."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-border-azul h-100 text-center p-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="fa-regular fa-clock icone-azul"></i>
+                            <h4 class="card-title text-azul-profundo">Tradição</h4>
+                            <p class="card-text">"Mais de 20 anos de mercado, entregando moda com credibilidade."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Linha do tempo / História resumida -->
+    <section class="py-5 bg-azul-claro">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3 class="text-azul-profundo fw-bold mb-4"><i class="fa-solid fa-anchor me-2"></i>Nossa Trajetória</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fa-regular fa-calendar-check me-3 text-azul-petroleo"></i> <strong>2002:</strong> Fundação em Criciúma com apenas 5 colaboradores.</li>
+                        <li class="mb-3"><i class="fa-regular fa-calendar-check me-3 text-azul-petroleo"></i> <strong>2010:</strong> Expansão para o mercado catarinense e ampliação da fábrica.</li>
+                        <li class="mb-3"><i class="fa-regular fa-calendar-check me-3 text-azul-petroleo"></i> <strong>2015:</strong> Certificação de qualidade e processos sustentáveis.</li>
+                        <li class="mb-3"><i class="fa-regular fa-calendar-check me-3 text-azul-petroleo"></i> <strong>2022:</strong> 20 anos de mercado com crescimento contínuo.</li>
+                        <li class="mb-3"><i class="fa-regular fa-calendar-check me-3 text-azul-petroleo"></i> <strong>2025:</strong> Consolidada como referência em confecção no sul do país.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-white p-4 rounded-4 shadow">
+                        <h4 class="text-azul-profundo"><i class="fa-regular fa-star me-2"></i>Especialidade</h4>
+                        <p class="fs-5">Confeccionamos peças de vestuário de alta qualidade, <strong>exceto roupas íntimas e sob medida</strong>. Camisas, calças, jaquetas, uniformes e muito mais.</p>
+                        <div class="row mt-4">
+                            <div class="col-6 text-center">
+                                <i class="fa-solid fa-shirt fs-1 text-azul-petroleo"></i>
+                                <p class="small mt-2">Moda masculina</p>
+                            </div>
+                            <div class="col-6 text-center">
+                                <i class="fa-solid fa-person-dress fs-1 text-azul-petroleo"></i>
+                                <p class="small mt-2">Moda feminina</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato e Localização -->
+    <section id="contato" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center section-title">Entre em Contato</h2>
+            <div class="row mt-5">
+                <div class="col-md-5 mb-4">
+                    <div class="bg-azul-claro p-4 rounded-4 shadow h-100">
+                        <h4 class="text-azul-profundo"><i class="fa-regular fa-address-card me-2"></i>Informações de Contato</h4>
+                        <ul class="list-unstyled mt-4">
+                            <li class="mb-3"><i class="fa-solid fa-phone-volume text-azul-petroleo me-3 fs-5"></i> (48) 3433-1234</li>
+                            <li class="mb-3"><i class="fa-regular fa-envelope text-azul-petroleo me-3 fs-5"></i> contato@vidamarinha.com.br</li>
+                            <li class="mb-3"><i class="fa-brands fa-whatsapp text-azul-petroleo me-3 fs-5"></i> (48) 99999-5678</li>
+                            <li class="mb-3"><i class="fa-brands fa-instagram text-azul-petroleo me-3 fs-5"></i> @vidamarinha.confeccoes</li>
+                            <li class="mb-3"><i class="fa-regular fa-clock text-azul-petroleo me-3 fs-5"></i> Seg a Sex: 8h às 18h | Sáb: 8h às 12h</li>
+                        </ul>
+                        <hr>
+                        <p class="mb-0"><i class="fa-solid fa-location-dot text-azul-petroleo me-2 fs-5"></i> <strong>Endereço:</strong> Rua das Confecções, 456 - Próspera, Criciúma - SC, 88805-100</p>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="bg-white p-4 rounded-4 shadow h-100 border border-azul-claro">
+                        <h4 class="text-azul-profundo"><i class="fa-regular fa-map me-2"></i>Onde Estamos</h4>
+                        <div class="ratio ratio-16x9 mt-3">
+                            <!-- Mapa do Google Maps (Criciúma) -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.500123456789!2d-49.374165!3d-28.678165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9521b1b1b1b1b1b1%3A0x123456789abcdef!2sCriciúma%2C%20SC!5e0!3m2!1spt-BR!2sbr!4v1711200000000!5m2!1spt-BR!2sbr" 
+                                style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <p class="mt-3 text-muted small"><i class="fa-regular fa-map-pin me-1"></i> Bairro Próspera - Criciúma/SC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-azul-marinho text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fa-solid fa-fish me-2"></i>Vida Marinha Confecções</h5>
+                    <p>Qualidade e tradição em vestuário desde 2002.</p>
+                    <div>
+                        <a href="#" class="text-white me-3 fs-4"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3 fs-4"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-white me-3 fs-4"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white-50 text-decoration-none"><i class="fa-solid fa-chevron-right me-2 small"></i>Home</a></li>
+                        <li><a href="#sobre" class="text-white-50 text-decoration-none"><i class="fa-solid fa-chevron-right me-2 small"></i>Sobre Nós</a></li>
+                        <li><a href="#dados" class="text-white-50 text-decoration-none"><i class="fa-solid fa-chevron-right me-2 small"></i>Dados da Empresa</a></li>
+                        <li><a href="#diferenciais" class="text-white-50 text-decoration-none"><i class="fa-solid fa-chevron-right me-2 small"></i>Diferenciais</a></li>
+                        <li><a href="#contato" class="text-white-50 text-decoration-none"><i class="fa-solid fa-chevron-right me-2 small"></i>Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Informações Fiscais</h5>
+                    <p class="small text-white-50">CNPJ: 05.360.791/0001-84<br>Razão Social: Vida Marinha Ind e Com de Confeccoes LTDA<br>Situação: Ativa<br>CNAE: 14.12-6-01</p>
+                    <p class="mt-3 small text-white-50"><i class="fa-regular fa-copyright me-1"></i>2002 - 2025 Vida Marinha. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
